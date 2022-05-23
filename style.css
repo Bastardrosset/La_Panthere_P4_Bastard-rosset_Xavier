@@ -39,7 +39,7 @@ a:hover {
     cursor: pointer;
 }
 .visually-hidden{
-    opacity: hidden;
+    opacity: 0;
 }
 /**** LOGO ****/
 .navbar-img{
@@ -238,12 +238,9 @@ border-bottom: 2px solid #c27956;
     border-color: #364577!important;
 }
 .col-xs-12 p{
-    margin: 80px 0px 50px;
+    margin: 40px 0px 50px;
 }
 /**** bloc-3-what-i-do  ****/
-#bloc-3-what-i-do{
-    height: 500px;
-}
 .bg-presentation {
     display: block;
     position: relative;
@@ -266,10 +263,6 @@ border-bottom: 2px solid #c27956;
     display: flex!important;
     align-items: center!important;
     justify-content: center!important;
-}
-.tight-width-whitespace{
-    transform: translateY(13%);
-    height: 400px;
 }
 .col-sm-12{
     position: relative;
@@ -300,16 +293,25 @@ border-bottom: 2px solid #c27956;
     background: url(/img/lines-h2-bg.webp);
 } 
 .container .row{
-    margin-top: 30px;
     margin-bottom: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+.container-porfolio h3{
+    padding-top: 30px;
+    text-align: center;
+}
+.container-porfolio i{
+    font-size: 30px;
+    color: black;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+}
 .col-sm-6{
     position: relative;
     width: 260px!important;
-    cursor: pointer;
 }
 .overlay{
     position: absolute;
@@ -333,12 +335,48 @@ border-bottom: 2px solid #c27956;
     color: #FFF!important;
     
 }
+.container-porfolio .img-portfolio button{
+    opacity: 0;  
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer!important;
+}
 .col-sm-6 img{
     width: 250px;
     height: 250px;
 }
 .text-center h3{
     padding-top: 25px;
+}
+.modal{
+   margin: 50%;
+   transform: translate(-50%, -50%);
+    width: 600px!important;
+    height: 600px!important;
+}
+.modal-content .modal-header button{
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    right: 0!important;
+    color: #000!important;
+}
+.btn-close:active{
+     opacity: 0!important;
+}
+.modal-content img{
+    margin: auto;
+    width: 80%!important;
+    height: 80%;
+}
+.modal-dialog .modal-footer{
+    width: 100%;
+}
+.modal-dialog .modal-footer h4{
+    position: relative;
+   width: 100%;
 }
 .col-sm-6 h4{
     font-size: 1.2rem;
@@ -366,11 +404,80 @@ border-bottom: 2px solid #c27956;
     background-image: url("img/dots-bg.webp");
 } 
 /**** bloc-5-cta ****/
-
+#bloc-5-cta{
+    background: url(./img/agence-la-panthere.webp);
+    height: 300px;
+}
+#bloc-5-cta .bloc .container,
+#bloc-5-cta .bloc .container .row{
+    width: 100%;
+    height: 100%;
+}
+#bloc-5-cta .bloc .container .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bloc-5-cta .bloc .container .row h5{
+    color: #000!important;
+    font-weight: 700;
+}
 /**** bloc-6 ****/
+#bloc-6{
+    height: 300px;
+    width: 100%;
+}
+#bloc-6 .contact-design,
+#bloc-6 .contact-design .bloc-lg,
+#bloc-6 .contact-design .bloc-lg .row,
+#bloc-6 .contact-design .bloc-lg .row .col-sm-12{
+    width: 100%;
+    height: 100%;
+}
+#bloc-6 .contact-design .bloc-lg .row .col-sm-12{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#bloc-6 .contact-design .bloc-lg .row .col-sm-12 h1{
+    color: #000!important;
+    font-size: 1.9em;
+    font-family: 'Open Sans', sans-serif;
+}
+#bloc-6 .contact-design .bloc-lg .row .col-sm-12 p{
+    color: #000!important;
+    font-weight: 600;
+}
 /**** bloc-7-Formulaire ****/
-
+#bloc-formulaire{
+    margin-top: 60px;
+}
+#bloc-formulaire h2{
+    display: none;
+}
+#bloc-formulaire .formulaire{
+    margin: 0px;
+}
+#bloc-formulaire .formulaire .row{
+    display: flex;
+    flex-direction: column;
+}
 /**** Footer - bloc-8 ****/
+footer{
+    height: 150px;
+}
+footer .text-footer{
+    padding-top: 20px;
+}
+.col-sm-3 .icons-footer a i{
+    font-size: 24px;
+    color: rgb(197, 196, 196);
+}
+.col-sm-3 .icons-footer a i:hover{
+    color: #FFF;
+}
+/**** Responsive ****/
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
     .b-parallax {
         background-attachment: scroll;
@@ -391,10 +498,6 @@ border-bottom: 2px solid #c27956;
     }
 }
 @media (max-width: 767px) {
-    .logo img {
-        max-height: 40px;
-        width: auto;
-    }
     .container-fluid-md .collapse{
         float: left!important;
         width: 100%!important;
@@ -428,6 +531,13 @@ border-bottom: 2px solid #c27956;
     .text-presentation{
     margin: 30px 20px 30px;
 }
+.col-xs-12 p{
+    padding: 15px;
 }
-@media screen and (max-width:538px) and (min-width:359){
+footer{
+    height: 300px;
+}
+.col-sm-3 .icons-footer a i{
+    margin-top: 15px;
+}
 }
