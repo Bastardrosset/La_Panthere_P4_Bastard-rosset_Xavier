@@ -433,6 +433,8 @@ border-bottom: 2px solid #c27956;
 #bloc-6 .contact-design .bloc-lg .row .col-sm-12{
     width: 100%;
     height: 100%;
+    margin: 0!important;
+    padding: 0!important;
 }
 #bloc-6 .contact-design .bloc-lg .row .col-sm-12{
     display: flex;
@@ -462,6 +464,30 @@ border-bottom: 2px solid #c27956;
 #bloc-formulaire .formulaire .row{
     display: flex;
     flex-direction: column;
+}
+#bloc-formulaire .formulaire .row .col-sm-6,
+#bloc-formulaire .formulaire .row .col-sm-6 form{
+    width: 100%!important;
+}
+form :nth-child(1){
+    width: 40%!important;
+}
+form :nth-child(2){
+    width: 60%!important;
+}
+form :nth-child(3){
+    width: 80%!important;
+}
+form :nth-child(4){
+    width: 100%!important;
+}
+.form-group textarea{
+    resize: none;
+}
+.col-sm-6 form button{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #F3976C;
 }
 /**** Footer - bloc-8 ****/
 footer{
@@ -534,6 +560,25 @@ footer .text-footer{
 .col-xs-12 p{
     padding: 15px;
 }
+/**** Formumaire ****/
+#bloc-formulaire .formulaire .row .col-sm-6,
+#bloc-formulaire .formulaire .row .col-sm-6 form{
+    width: 100%!important;
+}
+form :nth-child(1),
+form :nth-child(2),
+form :nth-child(3),
+form :nth-child(4){
+    width: 100%!important;
+    margin-top: 5px;
+}
+form input{
+    height: 49px;
+}
+form :nth-child(4){
+    margin-bottom: 20px;
+}
+/**** Footer ****/
 footer{
     height: 300px;
 }
