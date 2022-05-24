@@ -289,7 +289,7 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url(./img/texture-paper.webp);
+    background: url(img/texture-paper.webp);
     background-size: 280px 280px;
     position: absolute
 }
@@ -338,7 +338,7 @@ a:hover {
 #bloc-4-portfolio {
     display: block;
     position: relative;
-    background: url(/img/lines-h2-bg.webp)
+    background: url(img/lines-h2-bg.webp)
 }
 
 .container .row {
